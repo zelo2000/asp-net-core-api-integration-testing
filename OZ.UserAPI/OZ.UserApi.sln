@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.UserApi.Services", "OZ.U
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.UserApi.Data", "OZ.UserApi.Data\OZ.UserApi.Data.csproj", "{0D4B7827-F601-4EBB-A98E-FF8B7B188B90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OZ.UserApi.IntegrationTests", "OZ.UserApi.IntegrationTests\OZ.UserApi.IntegrationTests.csproj", "{F5A60EFF-70FB-40C4-B921-C2E0844FE355}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OZ.UserApi.UnitTests", "OZ.UserApi.UnitTests\OZ.UserApi.UnitTests.csproj", "{ED86B1D5-3444-4053-9B28-CB46902DC14A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E5130879-5C5C-409E-B6BE-44AC5FCF7A56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.OrderApi", "..\OZ.OrderApi\OZ.OrderApi.csproj", "{0D8542DE-A5CE-459B-9E52-FFBB5CBBDBB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.UserApi.IntegrationTests", "Test\OZ.UserApi.IntegrationTests\OZ.UserApi.IntegrationTests.csproj", "{9DD2C618-2209-4EE6-A560-9823EF43BE4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.UserApi.UnitTests", "Test\OZ.UserApi.UnitTests\OZ.UserApi.UnitTests.csproj", "{52EA5400-2386-4576-BEED-89AB2C7F524C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,21 +35,25 @@ Global
 		{0D4B7827-F601-4EBB-A98E-FF8B7B188B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D4B7827-F601-4EBB-A98E-FF8B7B188B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D4B7827-F601-4EBB-A98E-FF8B7B188B90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5A60EFF-70FB-40C4-B921-C2E0844FE355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5A60EFF-70FB-40C4-B921-C2E0844FE355}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5A60EFF-70FB-40C4-B921-C2E0844FE355}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5A60EFF-70FB-40C4-B921-C2E0844FE355}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED86B1D5-3444-4053-9B28-CB46902DC14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED86B1D5-3444-4053-9B28-CB46902DC14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED86B1D5-3444-4053-9B28-CB46902DC14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED86B1D5-3444-4053-9B28-CB46902DC14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8542DE-A5CE-459B-9E52-FFBB5CBBDBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8542DE-A5CE-459B-9E52-FFBB5CBBDBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8542DE-A5CE-459B-9E52-FFBB5CBBDBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8542DE-A5CE-459B-9E52-FFBB5CBBDBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD2C618-2209-4EE6-A560-9823EF43BE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD2C618-2209-4EE6-A560-9823EF43BE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD2C618-2209-4EE6-A560-9823EF43BE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD2C618-2209-4EE6-A560-9823EF43BE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52EA5400-2386-4576-BEED-89AB2C7F524C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EA5400-2386-4576-BEED-89AB2C7F524C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EA5400-2386-4576-BEED-89AB2C7F524C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EA5400-2386-4576-BEED-89AB2C7F524C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F5A60EFF-70FB-40C4-B921-C2E0844FE355} = {E5130879-5C5C-409E-B6BE-44AC5FCF7A56}
-		{ED86B1D5-3444-4053-9B28-CB46902DC14A} = {E5130879-5C5C-409E-B6BE-44AC5FCF7A56}
+		{9DD2C618-2209-4EE6-A560-9823EF43BE4C} = {E5130879-5C5C-409E-B6BE-44AC5FCF7A56}
+		{52EA5400-2386-4576-BEED-89AB2C7F524C} = {E5130879-5C5C-409E-B6BE-44AC5FCF7A56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C814C0D5-B324-4950-A4F9-391CE49669FB}

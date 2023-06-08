@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OZ.UserApi.WebAPI\OZ.UserApi.WebApi.csproj" />
+    <ProjectReference Include="..\..\OZ.UserApi.WebAPI\OZ.UserApi.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

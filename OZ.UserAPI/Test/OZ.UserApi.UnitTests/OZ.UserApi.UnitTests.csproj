@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OZ.UserApi.Data\OZ.UserApi.Data.csproj" />
-    <ProjectReference Include="..\OZ.UserApi.Services\OZ.UserApi.Services.csproj" />
+    <ProjectReference Include="..\..\OZ.UserApi.Data\OZ.UserApi.Data.csproj" />
+    <ProjectReference Include="..\..\OZ.UserApi.Services\OZ.UserApi.Services.csproj" />
   </ItemGroup>
 
 </Project>
