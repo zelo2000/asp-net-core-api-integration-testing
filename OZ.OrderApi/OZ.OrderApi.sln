@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OZ.OrderApi.WebApi", "OZ.OrderApi.WebApi\OZ.OrderApi.WebApi.csproj", "{551BF6A4-5843-49E7-B0B7-32D687F310A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.OrderApi.WebApi", "OZ.OrderApi.WebApi\OZ.OrderApi.WebApi.csproj", "{551BF6A4-5843-49E7-B0B7-32D687F310A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.OrderApi.IntegrationTests", "Test\OZ.OrderApi.IntegrationTests\OZ.OrderApi.IntegrationTests.csproj", "{196E92C7-407F-461F-AE8A-4E226AECB157}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0B08CE18-DDD4-4BEB-AFB9-352E98023781}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{551BF6A4-5843-49E7-B0B7-32D687F310A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{551BF6A4-5843-49E7-B0B7-32D687F310A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{551BF6A4-5843-49E7-B0B7-32D687F310A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{196E92C7-407F-461F-AE8A-4E226AECB157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{196E92C7-407F-461F-AE8A-4E226AECB157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{196E92C7-407F-461F-AE8A-4E226AECB157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{196E92C7-407F-461F-AE8A-4E226AECB157}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{196E92C7-407F-461F-AE8A-4E226AECB157} = {0B08CE18-DDD4-4BEB-AFB9-352E98023781}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D7C6D96-8C25-413F-A106-F719BA0895D2}
