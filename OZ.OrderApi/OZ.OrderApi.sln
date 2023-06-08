@@ -6,10 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.OrderApi.WebApi", "OZ.OrderApi.WebApi\OZ.OrderApi.WebApi.csproj", "{551BF6A4-5843-49E7-B0B7-32D687F310A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.OrderApi.IntegrationTests", "Test\OZ.OrderApi.IntegrationTests\OZ.OrderApi.IntegrationTests.csproj", "{196E92C7-407F-461F-AE8A-4E226AECB157}"
+	ProjectSection(ProjectDependencies) = postProject
+		{551BF6A4-5843-49E7-B0B7-32D687F310A5} = {551BF6A4-5843-49E7-B0B7-32D687F310A5}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0B08CE18-DDD4-4BEB-AFB9-352E98023781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OZ.OrderApi.Services", "OZ.OrderApi.Services\OZ.OrderApi.Services.csproj", "{08583194-783C-49AA-9164-764D3777C33E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.OrderApi.Services", "OZ.OrderApi.Services\OZ.OrderApi.Services.csproj", "{08583194-783C-49AA-9164-764D3777C33E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

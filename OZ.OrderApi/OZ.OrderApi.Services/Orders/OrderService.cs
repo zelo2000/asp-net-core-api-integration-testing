@@ -6,13 +6,6 @@ using OZ.OrderApi.Services.Users;
 
 namespace OZ.OrderApi.Services.Orders
 {
-    public interface IOrderService
-    {
-        Task<Order> GetOrderById(Guid orderId);
-
-        Task<IEnumerable<Order>> GetOrderByUserId(Guid userId);
-    }
-
     public class OrderService : IOrderService
     {
         private readonly List<OrderEntity> _orders;
