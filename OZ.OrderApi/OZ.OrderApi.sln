@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OZ.OrderApi.IntegrationTest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0B08CE18-DDD4-4BEB-AFB9-352E98023781}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OZ.OrderApi.Services", "OZ.OrderApi.Services\OZ.OrderApi.Services.csproj", "{08583194-783C-49AA-9164-764D3777C33E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{196E92C7-407F-461F-AE8A-4E226AECB157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{196E92C7-407F-461F-AE8A-4E226AECB157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{196E92C7-407F-461F-AE8A-4E226AECB157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08583194-783C-49AA-9164-764D3777C33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08583194-783C-49AA-9164-764D3777C33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08583194-783C-49AA-9164-764D3777C33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08583194-783C-49AA-9164-764D3777C33E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,7 @@
-﻿using Newtonsoft.Json;
-using OZ.UserApi.Services.Exceptions;
+﻿using OZ.UserApi.Services.Exceptions;
 using System.Net;
 
-namespace OZ.UserApi.WebApi.Middleware
+namespace OZ.UserApi.WebApi.Middlewares
 {
     public class ExceptionMiddleware
     {

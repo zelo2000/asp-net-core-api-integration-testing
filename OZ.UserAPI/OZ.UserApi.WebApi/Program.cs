@@ -3,7 +3,7 @@ using OZ.UserApi.Services;
 using OZ.UserApi.Data;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using OZ.UserApi.WebApi.Middleware;
+using OZ.UserApi.WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
