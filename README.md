@@ -16,7 +16,7 @@
 ## Order API
 
 - Web API to manage orders
-- Use User API to get information about user who create order
+- Uses **_User API_** to get information about the user who created the order
 - Three-layer architecture (with hardcoded data access layer)
 
 ### Technologies and libraries:
