@@ -3,7 +3,7 @@
 ## User API
 
 - Web API to perform users CRUD operations
-- Tree layer architecture
+- Three-layer architecture
 
 ### Technologies and libraries:
 
@@ -17,7 +17,7 @@
 
 - Web API to manage orders
 - Use User API to get information about user who create order
-- Tree layer architecture (with hardcoded data access layer)
+- Three-layer architecture (with hardcoded data access layer)
 
 ### Technologies and libraries:
 
