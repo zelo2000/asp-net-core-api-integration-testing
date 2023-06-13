@@ -9,9 +9,13 @@
 
 - API layer build with [ASP.NET Core 6.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-6.0?view=aspnetcore-6.0)
 - Swagger documentation with [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
+- API parameters validation using [FluentValidation](https://docs.fluentvalidation.net/en/latest/)
 - MS SQL database
-- Unit test with [xUnit](https://github.com/xunit/xunit)
-- Integration tests with [xUnit](https://github.com/xunit/xunit) and [TestContainers](https://github.com/testcontainers/testcontainers-dotnet)
+- Unit and integration tests with:
+  - [xUnit](https://github.com/xunit/xunit)
+  - [TestContainers](https://github.com/testcontainers/testcontainers-dotnet)
+  - [AutoFixture](https://github.com/AutoFixture/AutoFixture)
+  - [Shouldly](https://github.com/shouldly/shouldly)
 
 ## Order API
 
@@ -23,7 +27,11 @@
 
 - API layer build with [ASP.NET Core 6.0](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-6.0?view=aspnetcore-6.0)
 - Swagger documentation with [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
-- Integration tests with [xUnit](https://github.com/xunit/xunit) and [WireMock](https://github.com/WireMock-Net/WireMock.Net)
+- Integration tests with:
+  - [xUnit](https://github.com/xunit/xunit)
+  - [WireMock](https://github.com/WireMock-Net/WireMock.Net)
+  - [AutoFixture](https://github.com/AutoFixture/AutoFixture)
+  - [Shouldly](https://github.com/shouldly/shouldly)
 
 ## References
 
