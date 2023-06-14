@@ -41,21 +41,21 @@
 
 #### Test result
 
-![Order API test](images/order_api_test_result.png?raw=true "Order API tests")
+<img src="images/order_api_test_result.png" width="50%" height="auto" title="Order API tests" >
 
 #### Pipeline build
 
-![Order API build pipeline](images/order_api_pipline_build_result.png?raw=true "Order API build pipeline")
+<img src="images/order_api_pipeline_build_result.png" width="50%" height="auto" title="Order API build pipeline">
 
 ### User API
 
 #### Test result
 
-![User API tests](images/user_api_test_result.png?raw=true "User API tests")
+<img src="images/user_api_test_result.png" width="50%" height="auto" title="User API tests" >
 
 #### Pipeline build
 
-![User API build pipeline](images/user_api_pipline_build_result.png?raw=true "User API build pipeline")
+<img src="images/user_api_pipeline_build_result.png" width="50%" height="auto" title="User API build pipeline">
 
 ## References
 
