@@ -1,5 +1,5 @@
-﻿using OZ.OrderApi.Services.Orders.Entities;
-using OZ.OrderApi.Services.Orders.Models;
+﻿using OZ.OrderApi.Contracts.Orders;
+using OZ.OrderApi.Services.Orders.Entities;
 namespace OZ.OrderApi.Services.Orders.Mappers
 {
     public static class OrderMapper

@@ -1,4 +1,4 @@
-﻿namespace OZ.OrderApi.Services.Orders.Models
+﻿namespace OZ.OrderApi.Contracts.Orders
 {
     public record OrderItem
     {

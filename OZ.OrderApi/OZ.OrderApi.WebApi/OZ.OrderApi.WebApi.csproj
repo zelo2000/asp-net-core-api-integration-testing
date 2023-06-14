@@ -1,20 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.18" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="NSwag.AspNetCore" Version="13.19.0" />
+		<PackageReference Include="NSwag.MSBuild" Version="13.19.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\OZ.OrderApi.Services\OZ.OrderApi.Services.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\OZ.OrderApi.Services\OZ.OrderApi.Services.csproj" />
+	</ItemGroup>
 
+	<ItemGroup>
+		<NSwagInputFiles Include="$(MSBuildThisFileDirectory)**/*.cs" Exclude="$(MSBuildThisFileDirectory)obj/**/*.cs" />
+		<NSwagInputFiles Remove="nswag.json" />
+		<NSwagInputFiles Include="$(MSBuildThisFileDirectory)nswag.json" />
+		<NSwagOutputFiles Include="$(MSBuildThisFileDirectory)../../OZ.OrderApi.Client/OrderApiClient.g.cs" />
+	</ItemGroup>
+
+	<Target Name="NSwag" Condition="'$(Configuration)' == 'Debug' AND '$(NCrunch)' != '1'" AfterTargets="Build" Inputs="@(NSwagInputFiles)" Outputs="@(NSwagOutputFiles)">
+		<Delete Files="@(NSwagOutputFiles)" />
+		<Exec Command="$(NSwagExe_Net60) run nswag.json /variables:Configuration=$(Configuration)" />
+	</Target>
 </Project>

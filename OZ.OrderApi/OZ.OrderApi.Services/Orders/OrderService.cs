@@ -1,7 +1,7 @@
-﻿using OZ.OrderApi.Services.Exceptions;
+﻿using OZ.OrderApi.Contracts.Orders;
+using OZ.OrderApi.Services.Exceptions;
 using OZ.OrderApi.Services.Orders.Entities;
 using OZ.OrderApi.Services.Orders.Mappers;
-using OZ.OrderApi.Services.Orders.Models;
 using OZ.OrderApi.Services.Users;
 
 namespace OZ.OrderApi.Services.Orders

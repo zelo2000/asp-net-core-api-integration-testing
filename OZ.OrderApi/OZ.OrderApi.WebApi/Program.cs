@@ -1,13 +1,11 @@
-using Microsoft.OpenApi.Models;
 using OZ.OrderApi.Services;
 using OZ.OrderApi.WebApi.Middlewares;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddApiVersioning(o =>
 {
     o.AssumeDefaultVersionWhenUnspecified = true;
@@ -17,18 +15,16 @@ builder.Services.AddApiVersioning(o =>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
+builder.Services.AddSwaggerDocument(settings =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo
+    settings.PostProcess = document =>
     {
-        Version = "v1",
-        Title = "Order API",
-        Description = "Order API for integration testing",
-    });
-
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+        document.Info.Version = "v1";
+        document.Info.Title = "Order API";
+        document.Info.Description = "Order API for integration testing";
+    };
 });
+
 builder.Services.ConfigureServices(builder.Configuration);
 
 var app = builder.Build();
@@ -36,8 +32,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseOpenApi();
+    app.UseSwaggerUi3();
 }
 
 app.UseAuthorization();

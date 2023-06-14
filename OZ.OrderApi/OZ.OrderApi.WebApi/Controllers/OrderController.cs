@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using OZ.OrderApi.Contracts.Orders;
 using OZ.OrderApi.Services.Orders;
-using OZ.OrderApi.Services.Orders.Models;
 
 namespace OZ.OrderApi.WebApi.Controllers
 {

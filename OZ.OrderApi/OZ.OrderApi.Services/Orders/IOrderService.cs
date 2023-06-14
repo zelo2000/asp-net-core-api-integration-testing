@@ -1,4 +1,4 @@
-﻿using OZ.OrderApi.Services.Orders.Models;
+﻿using OZ.OrderApi.Contracts.Orders;
 
 namespace OZ.OrderApi.Services.Orders
 {

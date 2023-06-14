@@ -1,6 +1,6 @@
 using AutoFixture;
 using Microsoft.Extensions.DependencyInjection;
-using OZ.OrderApi.Services.Orders.Models;
+using OZ.OrderApi.Contracts.Orders;
 using OZ.OrderApi.Services.Users.Models;
 using Shouldly;
 using System.Net;
