@@ -41,6 +41,6 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: '**/*Tests/*OZ.OrderApi*.csproj'
+    projects: '**/*Tests/OZ.OrderApi.IntegrationTests.csproj'
     arguments: '--configuration $(buildConfiguration)'
-  displayName: 'Run tests'
+  displayName: 'Run integration tests'

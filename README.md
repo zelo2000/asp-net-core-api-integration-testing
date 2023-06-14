@@ -3,6 +3,7 @@
 ## User API
 
 - Web API to perform users CRUD operations
+- YAML for Azure DevOps pipelines
 - Three-layer architecture
 
 ### Technologies and libraries:
@@ -21,6 +22,7 @@
 
 - Web API to manage orders
 - Uses **_User API_** to get information about the user who created the order
+- YAML for Azure DevOps pipelines
 - Three-layer architecture (with hardcoded data access layer)
 
 ### Technologies and libraries:
@@ -35,13 +37,25 @@
 
 ## Result
 
-#### Order API test result
+### Order API
+
+#### Test result
 
 ![Order API test](images/order_api_test_result.png?raw=true "Order API tests")
 
-#### User API test result
+#### Pipeline build
+
+![Order API build pipeline](order_api_pipline_build_result.png?raw=true "Order API build pipeline")
+
+#### User API
+
+#### Test result
 
 ![User API tests](images/user_api_test_result.png?raw=true "User API tests")
+
+#### Pipeline build
+
+![User API build pipeline](user_api_pipline_build_result.png?raw=true "User API build pipeline")
 
 ## References
 
