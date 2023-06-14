@@ -45,9 +45,9 @@
 
 #### Pipeline build
 
-![Order API build pipeline](order_api_pipline_build_result.png?raw=true "Order API build pipeline")
+![Order API build pipeline](images/order_api_pipline_build_result.png?raw=true "Order API build pipeline")
 
-#### User API
+### User API
 
 #### Test result
 
@@ -55,7 +55,7 @@
 
 #### Pipeline build
 
-![User API build pipeline](user_api_pipline_build_result.png?raw=true "User API build pipeline")
+![User API build pipeline](images/user_api_pipline_build_result.png?raw=true "User API build pipeline")
 
 ## References
 
