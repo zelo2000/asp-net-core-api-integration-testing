@@ -4,6 +4,7 @@ using OZ.UserApi.Data;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using OZ.UserApi.WebApi.Middlewares;
+using OZ.UserApi.Services.Storage.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,8 @@ builder.Services.AddSwaggerGen(options =>
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
+
+builder.Services.Configure<StorageConfiguration>(builder.Configuration.GetSection("StorageConfiguration"));
 builder.Services.ConfigureServices();
 builder.Services.ConfigureData(builder.Configuration);
 

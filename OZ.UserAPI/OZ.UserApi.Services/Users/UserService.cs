@@ -1,5 +1,7 @@
-﻿using OZ.UserApi.Data.Users;
+﻿using Microsoft.Extensions.Options;
+using OZ.UserApi.Data.Users;
 using OZ.UserApi.Services.Exceptions;
+using OZ.UserApi.Services.Storage.Models;
 using OZ.UserApi.Services.Users.Mappers;
 using OZ.UserApi.Services.Users.Models;
 
@@ -9,24 +11,26 @@ namespace OZ.UserApi.Services.Users
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly StorageConfiguration _storageOptions;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IOptions<StorageConfiguration> storageOptions)
         {
             _userRepository = userRepository;
+            _storageOptions = storageOptions.Value;
         }
 
         /// <inheritdoc/>
         public async Task<IEnumerable<User>> GetUsers()
         {
             var users = await _userRepository.GetAllAsync();
-            return users.Select(u => u.ToDomain());
+            return users.Select(u => u.ToDomain().WithImageUrl(_storageOptions));
         }
 
         /// <inheritdoc/>
         public async Task<User?> GetUserById(Guid userId)
         {
             var user = await _userRepository.GetByIdAsync(userId);
-            return user?.ToDomain();
+            return user?.ToDomain().WithImageUrl(_storageOptions);
         }
 
         /// <inheritdoc/>
@@ -34,7 +38,7 @@ namespace OZ.UserApi.Services.Users
         {
             var entity = payload.ToEntity();
             var user = await _userRepository.AddAsync(entity);
-            return user.ToDomain();
+            return user.ToDomain().WithImageUrl(_storageOptions);
         }
 
         /// <inheritdoc/>
@@ -51,7 +55,7 @@ namespace OZ.UserApi.Services.Users
             entity.Email = payload.Email;
 
             var user = await _userRepository.UpdateAsync(entity);
-            return user.ToDomain();
+            return user.ToDomain().WithImageUrl(_storageOptions);
         }
 
         /// <inheritdoc/>

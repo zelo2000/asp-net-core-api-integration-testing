@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Moq;
 using OZ.UserApi.Data.Users;
+using OZ.UserApi.Services.Storage.Models;
 using OZ.UserApi.Services.Users;
 using OZ.UserApi.Services.Users.Models;
 using Shouldly;
@@ -9,6 +12,7 @@ namespace OZ.UserApi.UnitTests.Users
     public class UserServiceTest
     {
         private readonly Mock<IUserRepository> _repository;
+        private readonly Mock<IOptions<StorageConfiguration>> _configuration;
         private readonly IUserService _service;
 
         private readonly UserEntity _userEntity = new()
@@ -17,13 +21,23 @@ namespace OZ.UserApi.UnitTests.Users
             FirstName = "FirstName",
             LastName = "LastName",
             Email = "FirstName.LastName@domain.test",
+            ImageUrl = "test.png",
             CreatedAt = DateTime.MinValue
         };
 
         public UserServiceTest()
         {
             _repository = new Mock<IUserRepository>();
-            _service = new UserService(_repository.Object);
+            _configuration = new Mock<IOptions<StorageConfiguration>>();
+
+            _configuration.Setup(opt => opt.Value)
+                .Returns(new StorageConfiguration
+                {
+                    ContainerName = "test",
+                    ContainerUrl = "https://test.test"
+                });
+
+            _service = new UserService(_repository.Object, _configuration.Object);
         }
 
         [Fact]

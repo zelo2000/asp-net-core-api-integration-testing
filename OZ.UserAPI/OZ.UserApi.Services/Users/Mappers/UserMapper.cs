@@ -1,4 +1,5 @@
 ﻿using OZ.UserApi.Data.Users;
+using OZ.UserApi.Services.Storage.Models;
 using OZ.UserApi.Services.Users.Models;
 
 namespace OZ.UserApi.Services.Users.Mappers
@@ -14,6 +15,12 @@ namespace OZ.UserApi.Services.Users.Mappers
                 LastName = entity.LastName,
                 Email = entity.Email
             };
+        }
+
+        public static User WithImageUrl(this User user, StorageConfiguration configuration)
+        {
+            user.ImageUrl = configuration.ContainerUrl + user.ImageUrl;
+            return user;
         }
 
         public static UserEntity ToEntity(this UserPayload entity)

@@ -1,6 +1,6 @@
 ﻿namespace OZ.UserApi.Services
 {
-    public interface IValidatorMarket
+    public interface IValidatorMarker
     {
     }
 }
