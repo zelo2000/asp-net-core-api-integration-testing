@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OZ.UserApi.Services.UserImages;
-using OZ.UserApi.Services.Users.Models;
 
 namespace OZ.UserApi.WebApi.Controllers
 {

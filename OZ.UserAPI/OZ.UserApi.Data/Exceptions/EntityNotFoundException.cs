@@ -1,4 +1,4 @@
-﻿namespace OZ.UserApi.Services.Exceptions
+﻿namespace OZ.UserApi.Data.Exceptions
 {
     public class EntityNotFoundException : Exception
     {

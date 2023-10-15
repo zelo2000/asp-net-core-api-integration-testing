@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using OZ.UserApi.Data.Exceptions;
 using OZ.UserApi.Services.Storage.Models;
 
 namespace OZ.UserApi.Services.Images
@@ -30,7 +31,7 @@ namespace OZ.UserApi.Services.Images
 
             if (!blob.Exists())
             {
-                throw new Exception($"Image with {name} was not exist");
+                throw new EntityNotFoundException($"Image with {name} was not exist");
             }
 
             // Delete image from blob

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using OZ.UserApi.Data.Exceptions;
 using OZ.UserApi.Data.Users;
 using OZ.UserApi.Services.Images;
 
@@ -26,7 +27,7 @@ namespace OZ.UserApi.Services.UserImages
         public async Task DeleteImage(Guid userId)
         {
             var user = await _userRepository.GetByIdAsync(userId)
-                ?? throw new Exception($"Can not found user with id {userId}");
+                ?? throw new EntityNotFoundException($"Can not found user with id {userId}");
 
             if (!string.IsNullOrWhiteSpace(user.ImageUrl))
             {

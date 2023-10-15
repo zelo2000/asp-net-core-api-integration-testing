@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
+using OZ.UserApi.Data.Exceptions;
 using OZ.UserApi.Data.Users;
-using OZ.UserApi.Services.Exceptions;
 using OZ.UserApi.Services.Storage.Models;
 using OZ.UserApi.Services.Users.Mappers;
 using OZ.UserApi.Services.Users.Models;

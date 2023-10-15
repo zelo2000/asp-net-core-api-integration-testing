@@ -1,4 +1,4 @@
-﻿using OZ.UserApi.Services.Exceptions;
+﻿using OZ.UserApi.Data.Exceptions;
 using System.Net;
 
 namespace OZ.UserApi.WebApi.Middlewares

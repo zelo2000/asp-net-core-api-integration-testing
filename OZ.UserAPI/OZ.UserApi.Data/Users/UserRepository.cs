@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OZ.UserApi.Data.Base;
+using OZ.UserApi.Data.Exceptions;
 
 namespace OZ.UserApi.Data.Users
 {
@@ -15,7 +16,7 @@ namespace OZ.UserApi.Data.Users
         public async Task SetUserImage(Guid userId, string? imageUrl)
         {
             var user = await Context.Users.FirstOrDefaultAsync(u => u.Id == userId)
-                ?? throw new Exception($"Can not found user with id {userId}");
+                ?? throw new EntityNotFoundException($"Can not found user with id {userId}");
 
             user.ImageUrl = imageUrl;
             Context.Users.Update(user);

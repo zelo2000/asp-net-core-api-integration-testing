@@ -1,7 +1,7 @@
 ﻿using OZ.UserApi.Data.Users;
 using OZ.UserApi.IntegrationTests.Users.Base;
-using System.Net;
 using Shouldly;
+using System.Net;
 
 namespace OZ.UserApi.IntegrationTests.Users
 {

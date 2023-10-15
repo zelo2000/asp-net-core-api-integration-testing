@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OZ.UserApi.Data.Users;
-using Microsoft.EntityFrameworkCore;
 
 namespace OZ.UserApi.Data
 {

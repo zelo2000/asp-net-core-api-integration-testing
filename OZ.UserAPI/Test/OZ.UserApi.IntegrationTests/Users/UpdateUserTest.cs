@@ -1,9 +1,9 @@
-﻿using OZ.UserApi.Services.Users.Models;
-using System.Net.Http.Json;
-using System.Net;
-using Shouldly;
+﻿using OZ.UserApi.Data.Users;
 using OZ.UserApi.IntegrationTests.Users.Base;
-using OZ.UserApi.Data.Users;
+using OZ.UserApi.Services.Users.Models;
+using Shouldly;
+using System.Net;
+using System.Net.Http.Json;
 
 namespace OZ.UserApi.IntegrationTests.Users
 {
