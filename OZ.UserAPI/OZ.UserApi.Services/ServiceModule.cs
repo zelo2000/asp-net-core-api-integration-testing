@@ -1,5 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using OZ.UserApi.Services.Auth;
+using OZ.UserApi.Services.Auth.Helpers;
 using OZ.UserApi.Services.Images;
 using OZ.UserApi.Services.Users;
 
@@ -11,6 +13,9 @@ namespace OZ.UserApi.Services
         {
             services.AddValidatorsFromAssemblyContaining<IValidatorMarker>();
 
+            services.AddSingleton<IHashGenerator, HashGenerator>();
+
+            services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IStorageService, StorageService>();
 

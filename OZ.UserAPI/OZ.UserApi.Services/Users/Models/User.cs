@@ -10,7 +10,7 @@
 
         public string FullName { get => $"{FirstName} {LastName}"; }
 
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
         public string Email { get; set; }
     }

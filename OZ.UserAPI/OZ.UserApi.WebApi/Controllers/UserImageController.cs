@@ -36,9 +36,11 @@ namespace OZ.UserApi.WebApi.Controllers
         /// Delete image
         /// </summary>
         /// <param name="userId">User identifier</param>
-        /// <response code="204"></response>
+        /// <response code="204">When image deleted</response>
+        /// <response code="404">The user is not found</response>
         [HttpDelete("{userId}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<bool>> DeleteImage(Guid userId)
         {
             await _userImageService.DeleteImage(userId);

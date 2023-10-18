@@ -26,6 +26,9 @@ namespace OZ.UserApi.Data.Users
 
                 entity.Property(x => x.CreatedAt)
                     .HasDefaultValueSql("getutcdate()");
+
+                entity.Property(x => x.ModifiedAt)
+                    .HasDefaultValueSql("getutcdate()");
             });
 
             return modelBuilder;

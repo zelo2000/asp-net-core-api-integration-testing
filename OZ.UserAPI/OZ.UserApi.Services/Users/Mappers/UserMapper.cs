@@ -13,7 +13,8 @@ namespace OZ.UserApi.Services.Users.Mappers
                 Id = entity.Id,
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
-                Email = entity.Email
+                Email = entity.Email,
+                ImageUrl = entity.ImageUrl,
             };
         }
 

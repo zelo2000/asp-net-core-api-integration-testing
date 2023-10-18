@@ -37,6 +37,8 @@ namespace OZ.UserApi.Services.Users
         public async Task<User> CreateUser(UserPayload payload)
         {
             var entity = payload.ToEntity();
+            entity.PasswordHash = payload.Password;
+
             var user = await _userRepository.AddAsync(entity);
             return user.ToDomain().WithImageUrl(_storageOptions);
         }
